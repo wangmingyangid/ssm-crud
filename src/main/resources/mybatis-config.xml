@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	<!-- 指定一个包名，MyBatis 会在包名下面搜索需要的 Java Bean
+		存在的意义仅在于用来减少类完全限定名的冗余
+	 -->
+	<typeAliases>
+		<package name="org.wmy.bean"/>
+	</typeAliases>
+</configuration>
