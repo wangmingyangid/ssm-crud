@@ -10,8 +10,33 @@ public class Employee {
     private String email;
 
     private Integer dId;
+    
+    //新增字段，希望查询出员工时带有部门信息
+    private Department department;
+    
+ 
+    public Employee() {
+		super();
+	}
 
-    public Integer getEmpId() {
+	public Employee(Integer empId, String empName, String gender, String email, Integer dId) {
+		super();
+		this.empId = empId;
+		this.empName = empName;
+		this.gender = gender;
+		this.email = email;
+		this.dId = dId;
+	}
+
+	public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
+
+	public Integer getEmpId() {
         return empId;
     }
 
@@ -50,4 +75,10 @@ public class Employee {
     public void setdId(Integer dId) {
         this.dId = dId;
     }
+
+	@Override
+	public String toString() {
+		return "Employee [empId=" + empId + ", empName=" + empName + ", gender=" + gender + ", email=" + email
+				+ ", dId=" + dId + "]";
+	}
 }

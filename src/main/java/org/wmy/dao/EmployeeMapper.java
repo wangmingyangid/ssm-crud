@@ -19,6 +19,12 @@ public interface EmployeeMapper {
     List<Employee> selectByExample(EmployeeExample example);
 
     Employee selectByPrimaryKey(Integer empId);
+    
+    //以下方法为新增方法，查出来的员工带部门名
+    List<Employee> selectByExampleWithDep(EmployeeExample example);
+
+    Employee selectByPrimaryKeyWithDep(Integer empId);
+    
 
     int updateByExampleSelective(@Param("record") Employee record, @Param("example") EmployeeExample example);
 

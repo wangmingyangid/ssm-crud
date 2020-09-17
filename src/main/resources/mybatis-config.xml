@@ -12,4 +12,10 @@
 	<typeAliases>
 		<package name="org.wmy.bean"/>
 	</typeAliases>
+	
+	<plugins>
+	    <plugin interceptor="com.github.pagehelper.PageInterceptor">
+		</plugin>
+	</plugins>
+	
 </configuration>
