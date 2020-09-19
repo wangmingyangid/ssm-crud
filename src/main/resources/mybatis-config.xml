@@ -15,6 +15,8 @@
 	
 	<plugins>
 	    <plugin interceptor="com.github.pagehelper.PageInterceptor">
+	    	<!-- 配置了该属性后，分页会合理（前端页面点击下一页和前一页时，分页条信息不会出错） -->
+	    	<property name="reasonable" value="true"></property>
 		</plugin>
 	</plugins>
 	
