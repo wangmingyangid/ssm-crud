@@ -26,7 +26,7 @@ import org.wmy.dao.EmployeeMapper;
  * 3.直接Autowired 即可使用需要的组件
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:applictionContext.xml"})
+@ContextConfiguration(locations={"classpath:applicationContext.xml"})
 public class MapperTest {
 	
 	@Autowired
@@ -51,15 +51,15 @@ public class MapperTest {
 		//2.插入几个员工进行测试
 		//employeeMapper.insertSelective(new Employee(null, "张飞", "M", "zf@qq.com", 1));
 		//3.批量插入员工，使用可以执行批量操作的sqlsession
-		/*EmployeeMapper mapper = sqlsession.getMapper(EmployeeMapper.class);
+		EmployeeMapper mapper = sqlsession.getMapper(EmployeeMapper.class);
 		for(int i=0;i<1000;i++){
 			String uid = UUID.randomUUID().toString().substring(0, 5)+i;
 			mapper.insertSelective(new Employee(null, uid, "M", uid+"wmy@qq.com", 1));
 		}
-		System.out.println("批量插入完成");*/
+		System.out.println("批量插入完成");
 		
-		EmployeeExample example = new EmployeeExample();
-		Criteria criteria = example.createCriteria();
+		/*EmployeeExample example = new EmployeeExample();
+		Criteria criteria = example.createCriteria();*/
 		
 		
 		/*//有选择的进行更新

@@ -69,6 +69,16 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	
+	<!-- 配置该过滤器的目的，使得客户端直接发送AJAX请求时，spring mvc 可以拦截处理，这样可以将请求数据封装成map -->
+	<filter>
+		<filter-name>HttpPutFormContentFilter</filter-name>
+		<filter-class>org.springframework.web.filter.HttpPutFormContentFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>HttpPutFormContentFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
 	
 	
 </web-app>
