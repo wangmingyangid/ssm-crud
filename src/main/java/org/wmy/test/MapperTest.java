@@ -26,7 +26,7 @@ import org.wmy.dao.EmployeeMapper;
  * 3.直接Autowired 即可使用需要的组件
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath:applictionContext.xml"})
+@ContextConfiguration(locations={"classpath:applicationContext.xml"})
 public class MapperTest {
 	
 	@Autowired
@@ -39,7 +39,7 @@ public class MapperTest {
 	@Test
 	public void testCURD(){
 		/*//1.创建spring容器
-		ApplicationContext ioc=new ClassPathXmlApplicationContext("applictionContext.xml");
+		ApplicationContext ioc=new ClassPathXmlApplicationContext("applicationContext.xml");
 		//2.从容器中获取mapper
 		DepartmentMapper bean = ioc.getBean(DepartmentMapper.class);*/
 		System.out.println(depMapper);
